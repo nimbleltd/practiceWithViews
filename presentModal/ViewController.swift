@@ -17,8 +17,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func openModal(sender: AnyObject) {
-        let nextController = UIImagePickerController()
-        self.presentViewController(nextController, animated: true, completion: nil)
+        
+        let alert = UIAlertController(title: "Hello World",
+                                      message: "hell yeah", preferredStyle: .Alert)
+        
+        let action = UIAlertAction(title: "OK", style: .Default){ action in self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        //        alert.addAction(action)
+//        Activity View
+//        let image = UIImage()
+//        let controller = UIActivityViewController (activityItems: [image], applicationActivities: nil)
+        
+//        let nextController = UIImagePickerController()
+//        self.presentViewController(nextController, animated: true, completion: nil)
+        self.presentViewController(alert, animated: true, completion: nil)
+
         
     }
 
